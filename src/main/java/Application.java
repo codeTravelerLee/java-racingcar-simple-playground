@@ -1,50 +1,8 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import domain.RacingGame;
 
 public class Application {
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).");
-        String carNames = scanner.nextLine();
-
-        String[] carsNamesArray = carNames.split(",");
-        ArrayList<Car> cars = new ArrayList<>(carsNamesArray.length);
-
-        RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
-        for(String carName: carsNamesArray) {
-            cars.add(new Car(carName.trim(), randomNumberGenerator ));
-        }
-
-        System.out.println("시도할 횟수는 몇 회인가요?");
-        int tryCount = scanner.nextInt();
-
-        System.out.println("실행 결과");
-        for(int i=0; i<tryCount; i++) {
-            for (Car car : cars) {
-                System.out.print(car.getName() + " :");
-                car.move();
-            }
-            System.out.println();
-        }
-
-        ArrayList<String> winners = new ArrayList<>(cars.size());
-
-        int highestMoveCount = 0;
-        for(Car car: cars) {
-            int carMoveCount = car.getTotalMoveCount();
-
-            if (carMoveCount >= highestMoveCount) {
-                highestMoveCount = carMoveCount;
-            }
-        }
-
-        for(Car car: cars) {
-            if(car.getTotalMoveCount() == highestMoveCount) {
-                winners.add(car.getName());
-            }
-        }
-
-        String result = String.join(",", winners) + "가 최종 우승했습니다.";
-        System.out.println(result);
+    public static void main(String[] args) {
+        RacingGame racingGame = new RacingGame();
+        racingGame.run();
     }
 }

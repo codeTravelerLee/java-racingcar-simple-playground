@@ -1,10 +1,11 @@
+package domain;
+
 public class Car {
     private final String name;
     private final StringBuilder moveStatus = new StringBuilder();
     private static final int MOVE_THRESHOLD = 4;
     private static final String MOVE_STATUS_MARKER = "-";
     private final RandomGenerator randomGenerator;
-
     private int totalMoveCount = 0;
 
     public Car(String name, RandomGenerator randomGenerator) {
