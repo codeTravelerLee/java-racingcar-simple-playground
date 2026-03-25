@@ -10,8 +10,9 @@ public class Main {
         String[] carsNamesArray = carNames.split(",");
         ArrayList<Car> cars = new ArrayList<>(carsNamesArray.length);
 
+        RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         for(String carName: carsNamesArray) {
-            cars.add(new Car(carName.trim()));
+            cars.add(new Car(carName.trim(), randomNumberGenerator ));
         }
 
         System.out.println("시도할 횟수는 몇 회인가요?");
