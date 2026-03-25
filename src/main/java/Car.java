@@ -1,5 +1,3 @@
-import java.util.Random;
-
 public class Car {
     private final String name;
     private final StringBuilder moveStatus = new StringBuilder();
@@ -8,7 +6,7 @@ public class Car {
     private final RandomGenerator randomGenerator;
 
     private int totalMoveCount = 0;
-    Random random = new Random();
+
     public Car(String name, RandomGenerator randomGenerator) {
         this.name = name;
         this.randomGenerator = randomGenerator;
