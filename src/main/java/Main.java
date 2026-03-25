@@ -44,13 +44,7 @@ public class Main {
             }
         }
 
-        for(String winner : winners) {
-            System.out.print(winner);
-            System.out.print(",");
-        }
-        System.out.println("가 최종 우승했습니다.");
-
-
-
+        String result = String.join(",", winners) + "가 최종 우승했습니다.";
+        System.out.println(result);
     }
 }
