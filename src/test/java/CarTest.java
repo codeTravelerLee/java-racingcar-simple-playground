@@ -28,4 +28,16 @@ public class CarTest {
         assertThat(car1.getTotalMoveCount()).isEqualTo(0);
         assertThat(car2.getTotalMoveCount()).isEqualTo(0);
     }
+
+    @Test
+    @DisplayName("자동차의 총 전진 횟수를 정확하게 저장하는지 테스트")
+    void testGetTotalMoveCount() {
+        Car car1 = new Car("포르쉐", () -> 4);
+
+        int testMoveCount = 10;
+        for(int i = 0 ; i < testMoveCount; i++) {
+            car1.move();
+        }
+        assertThat(car1.getTotalMoveCount()).isEqualTo(10);
+    }
 }
