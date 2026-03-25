@@ -15,6 +15,7 @@ public class Car {
             moveStatus.append("-");
             this.totalMoveCount += 1;
             System.out.println(moveStatus);
+            return;
         }
         System.out.println(moveStatus);
     }

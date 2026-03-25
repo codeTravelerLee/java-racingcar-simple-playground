@@ -23,6 +23,7 @@ public class Main {
                 System.out.print(car.getName() + " :");
                 car.move();
             }
+            System.out.println();
         }
 
         ArrayList<String> winners = new ArrayList<>(cars.size());
