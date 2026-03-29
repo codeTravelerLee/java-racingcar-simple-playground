@@ -69,6 +69,7 @@ public class RacingGame {
             for (Car car : cars) {
                 System.out.print(car.getName() + " :");
                 car.move();
+                System.out.println(car.getMoveStatus());
             }
             System.out.println();
         }
