@@ -23,10 +23,8 @@ public class ResultView {
 
         int highestMoveCount = 0;
         for(Car car: cars) {
-            int carMoveCount = car.getTotalMoveCount();
-
-            if (carMoveCount >= highestMoveCount) {
-                highestMoveCount = carMoveCount;
+            if (car.isWinner(highestMoveCount)) {
+                highestMoveCount = car.getTotalMoveCount();
             }
         }
 

@@ -30,4 +30,8 @@ public class Car {
     public String getMoveStatus() {
         return MOVE_STATUS_MARKER.repeat(totalMoveCount);
     }
+
+    public boolean isWinner(int highestMoveCount) {
+        return this.totalMoveCount >= highestMoveCount;
+    }
 }
