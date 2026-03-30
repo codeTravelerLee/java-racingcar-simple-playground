@@ -28,6 +28,7 @@ public class Car {
     }
 
     public String getMoveStatus() {
+        move();
         return MOVE_STATUS_MARKER.repeat(totalMoveCount);
     }
 
