@@ -9,16 +9,11 @@ import domain.RacingGame;
 
 public class InputView {
     private static final RacingGame racingGame = new RacingGame();
-    RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
     private final Scanner scanner = new Scanner(System.in);
 
     public String[] getCarNames() {
         String[] carNamesArray = getValidateCarNames();
         return  carNamesArray;
-    }
-
-    public int getTryCount() {
-        return getValidateTryCount();
     }
 
     private String[] getValidateCarNames() {
@@ -36,7 +31,7 @@ public class InputView {
         }
     }
 
-    private int getValidateTryCount() {
+    public int getValidateTryCount() {
         while(true) {
             try {
                 System.out.println("시도할 횟수는 몇 회인가요?");

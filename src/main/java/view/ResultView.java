@@ -5,7 +5,6 @@ import domain.Car;
 import java.util.ArrayList;
 
 public class ResultView {
-
     public void printPlayResult(int tryCount, ArrayList<Car> cars) {
         System.out.println("실행 결과");
         for(int i=0; i<tryCount; i++) {
@@ -28,6 +27,7 @@ public class ResultView {
             }
         }
 
+        // TODO: 일급 컬렉션으로 변경 필요
         for(Car car: cars) {
             if(car.getTotalMoveCount() == highestMoveCount) {
                 winners.add(car.getName());

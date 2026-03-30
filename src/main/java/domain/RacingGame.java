@@ -16,7 +16,7 @@ public class RacingGame {
             carNamesArray.add(new Car(car.trim(), randomNumberGenerator ));
         }
 
-        int tryCount = inputView.getTryCount();
+        int tryCount = inputView.getValidateTryCount();
 
         resultView.printPlayResult(tryCount, carNamesArray);
         resultView.printWinner(carNamesArray);
